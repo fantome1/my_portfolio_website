@@ -28,9 +28,6 @@ class NavbarLogoMob extends StatelessWidget {
         width: 250,
         child: Row(
           children: [
-            Image.asset(mode == AdaptiveThemeMode.dark
-                ? 'assets/images/logo-black.jpg'
-                : 'assets/images/logo-light.jpg'),
             const SizedBox(width: 10),
             const Text(
               'Phoenix Technologie',
@@ -57,9 +54,6 @@ class NavbarLogoDesk extends StatelessWidget {
         width: 500,
         child: Row(
           children: [
-            Image.asset(mode == AdaptiveThemeMode.dark
-                ? 'assets/images/logo-black.jpg'
-                : 'assets/images/logo-light.jpg'),
             const SizedBox(width: 10),
             const Text(
               'Phoenix Technologie',

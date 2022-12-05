@@ -4,6 +4,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'configure/navigation_service.dart';
+import 'pages/homescreen.dart';
 import 'pages/layoutPage.dart';
 
 void main() async {
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           title: 'Phoenix Technologie',
           theme: theme,
           darkTheme: darkTheme,
-          home: const LayoutPage()),
+          home: const HomeScreen()),
     );
   }
 }
