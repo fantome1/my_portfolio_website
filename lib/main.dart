@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       initial: savedThemeMode,
       builder: (theme, darkTheme) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Phoenix Technologie',
+          title: 'Issoufou Sawadogo - Portfolio',
           theme: theme,
           darkTheme: darkTheme,
           home: const HomeScreen()),

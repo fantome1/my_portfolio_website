@@ -11,7 +11,7 @@ class TopSection extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       alignment: Alignment.center,
-      constraints: const BoxConstraints(maxHeight: 900, minHeight: 700),
+      constraints: const BoxConstraints(maxHeight: 500, minHeight: 300),
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -23,13 +23,18 @@ class TopSection extends StatelessWidget {
         margin: const EdgeInsets.only(top: 18),
         width: 1200,
         child: Stack(
+          alignment: Alignment.center,
           children: [
             BlueCard(size: size),
-            /*Positioned(
+            Positioned(
               bottom: 0,
               right: 0,
-              child: PersonPic(),
-            ),*/
+              child: Container(
+                constraints:
+                    const BoxConstraints(maxWidth: 400, maxHeight: 600),
+                child: Image.asset("assets/images/me.png"),
+              ),
+            ),
             const Positioned(
               bottom: 0,
               child: Menu(),

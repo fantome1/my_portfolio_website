@@ -13,7 +13,7 @@ class BlueCard extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           constraints:
               BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
           width: double.infinity,
@@ -22,22 +22,44 @@ class BlueCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Issoufou \nSawadogo",
-                style: TextStyle(
-                  fontSize: 100,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  height: 1.5,
-                ),
+              Row(
+                children: const [
+                  Text('<',
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 80,
+                          fontFamily: "Agustina")),
+                  Text(
+                    "Issoufou",
+                    style: TextStyle(
+                      fontSize: 80,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      height: 1.5,
+                      fontFamily: "Agustina",
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                "Développeur Freelance",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    ?.copyWith(color: Colors.white),
-              )
+              Row(
+                children: const [
+                  Text(
+                    "Sawadogo",
+                    style: TextStyle(
+                      fontSize: 80,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      height: 1.5,
+                      fontFamily: "Agustina",
+                    ),
+                  ),
+                  Text('/>',
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 80,
+                          fontFamily: "Agustina")),
+                ],
+              ),
             ],
           ),
         ),
