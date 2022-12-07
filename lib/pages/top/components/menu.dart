@@ -26,8 +26,8 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-      constraints: BoxConstraints(maxWidth: 1000),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      constraints: const BoxConstraints(maxWidth: 1000),
       height: 80,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -65,7 +65,9 @@ class _MenuState extends State<Menu> {
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: !isEnabled ? Color(0xff565671) : Color(0xff989fd5),
+                color: !isEnabled
+                    ? const Color(0xff565671)
+                    : const Color(0xff989fd5),
                 border: Border.all(color: Colors.white, width: 2),
                 boxShadow: [
                   BoxShadow(
