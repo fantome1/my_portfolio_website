@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio_website/pages/top/components/top_card_blur.dart';
+import 'package:my_portfolio_website/responsive.dart';
 
 import 'components/menu.dart';
 
@@ -25,20 +26,21 @@ class TopSection extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            BlueCard(size: size),
+            if (!Responsive.isMobile(context)) BlueCard(size: size),
             Positioned(
               bottom: 0,
               right: 0,
               child: Container(
-                constraints:
-                    const BoxConstraints(maxWidth: 400, maxHeight: 600),
+                constraints: BoxConstraints(
+                    maxWidth: Responsive.isMobile(context) ? 400 : 400,
+                    maxHeight: Responsive.isMobile(context) ? 300 : 600),
                 child: Image.asset("assets/images/me.png"),
               ),
             ),
-            const Positioned(
+            /*const Positioned(
               bottom: 0,
               child: Menu(),
-            ),
+            ),*/
           ],
         ),
       ),

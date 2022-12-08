@@ -44,8 +44,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                 horizontal: 16.0,
                 vertical: 24.0,
               ),
-              child: NotificationListener(
+              child: NotificationListener<ScrollUpdateNotification>(
+                onNotification: (notif) {
+                  print('response : ${notif.scrollDelta}');
+                  return true;
+                },
                 child: ListView.separated(
+                    controller: _scrollController,
                     itemBuilder: (context, index) {
                       return ListTile(
                         onTap: () {
@@ -61,12 +66,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                         leading: Icon(HeaderRow.headerItems[index].iconData),
                         title: Text(HeaderRow.headerItems[index].title,
                             style: const TextStyle()),
-                        trailing: HeaderRow.headerItems[index].isDarkTheme != null
+                        trailing: HeaderRow.headerItems[index].isDarkTheme !=
+                                null
                             ? HeaderRow.headerItems[index].isDarkTheme!
                                 ? SizedBox(
                                     width: 50,
                                     child: CustomSwitch(
-                                        value: ref.read(themeProvider).isDarkMode,
+                                        value:
+                                            ref.read(themeProvider).isDarkMode,
                                         onChanged: (val) {
                                           ref
                                               .read(themeProvider)
@@ -108,9 +115,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                 children: [
                   SizedBox(height: Responsive.isDesktop(context) ? 80 : 20),
                   const TopSection(),
-                  Container(color: Colors.red, height: 500),
-                  Container(color: Colors.yellow, height: 300),
-                  Container(color: Colors.green, height: 500),
+                  Container(
+                    key: _homeProvider.aboutKey,
+                    color: Colors.red,
+                    height: 500,
+                  ),
+                  Container(
+                      key: _homeProvider.skillKey,
+                      color: Colors.yellow,
+                      height: 300),
+                  Container(
+                      key: _homeProvider.serviceKey,
+                      color: Colors.green,
+                      height: 500),
                 ],
               ),
             )),
