@@ -21,7 +21,7 @@ class CustomThemeProvider extends ChangeNotifier {
   }
 }
 
-class MyThemes{
+class MyThemes {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     colorScheme: const ColorScheme.light(),

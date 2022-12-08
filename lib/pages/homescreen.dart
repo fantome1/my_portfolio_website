@@ -1,6 +1,7 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio_website/pages/bodies/about/about_me.dart';
 import 'package:my_portfolio_website/pages/top/stack_header.dart';
 import 'package:my_portfolio_website/pages/top/top_section.dart';
 import 'package:my_portfolio_website/provider/home_provider.dart';
@@ -111,15 +112,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(height: Responsive.isDesktop(context) ? 80 : 20),
                   const TopSection(),
-                  Container(
-                    key: _homeProvider.aboutKey,
-                    color: Colors.red,
-                    height: 500,
-                  ),
+                  AboutMe(key: _homeProvider.aboutKey),
                   Container(
                       key: _homeProvider.skillKey,
                       color: Colors.yellow,
