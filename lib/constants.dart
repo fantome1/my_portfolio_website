@@ -42,6 +42,7 @@ const double kTabletMaxWidth = 760.0;
 double getMobileMaxWidth(BuildContext context) =>
     MediaQuery.of(context).size.width * .8;
 
-class Constants{
+class Constants {}
 
-}
+const String myDescription =
+    "J'ai obtenu mon diplôme en informatique à l'Université Aube Nouvelle de Ouagadougou en 2021. Je suis dans le développement des applications mobiles et WEB depuis plus de deux(2) ans maintenant. J'ai travaillé des plusieurs structures en équipe et tant qu'individu. J'ai crée des sites web pour plusieurs entreprises et j'ai également travaillé et je travaille sur des projets personnels(majoritairement des applications mobiles) dont j'ai lancé quelques-uns sur PlayStore comme dans AppStore. J'aime toujours apprendre de nouvelles technologies et réussir dans unenvironnement de croissance et d'excellence et gagner un travail qui me procure une satisfaction professionnelle et un développement personnel et m'aide à atteindre des objectifs personnels et organisationnels.";

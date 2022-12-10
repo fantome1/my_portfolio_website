@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_website/includes/section_title.dart';
+import 'package:my_portfolio_website/provider/theme_provider.dart';
 import 'package:my_portfolio_website/responsive.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 
@@ -53,7 +55,7 @@ class AboutMe extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      "I have done my Computer Science graduation at Xavier's Institute of Engineering on 2021. I have been developing Mobile Apps for more than 1 years now. I have worked as a Team and as an Indivual in various organization and launched the apps in Playstore as well as in Appstore. In my free time I use to write Technical Blog in Medium. Always love to learn new technologies and to succeed in an environment of growth and excellence and earn a job which provides me job satisfaction and self-development and help me achieve personal as well as organisational goals.",
+                      myDescription,
                       style: TextStyle(
                         color: kCaptionColor,
                         height: 1.5,
@@ -77,11 +79,12 @@ class AboutMe extends StatelessWidget {
                 ),
               ),
               if (Responsive.isDesktop(context) || Responsive.isTablet(context))
+                const SizedBox(width: 100),
+              if (Responsive.isDesktop(context) || Responsive.isTablet(context))
                 Expanded(
                   flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                  child: Container(
-                    color: Colors.red,
-                    height: 400,
+                  child: Image.asset(
+                    'assets/images/logo-light.jpg',
                     width: constraints.maxWidth > 720.0 ? null : 350.0,
                   ),
                 ),
